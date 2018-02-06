@@ -24,7 +24,7 @@ namespace Chroomsoft.Queries
             if (!handlers.ContainsKey(type))
                 throw new HandlerNotFoundException(type);
 
-            dynamic handler = this.handlers[query.GetType()];
+            dynamic handler = this.handlers[type];
 
             return handler((dynamic)query);
         }

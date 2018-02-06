@@ -7,26 +7,26 @@ namespace Chroomsoft.Queries.Tests
     public class QueryHandlerRegisterTest
     {
         private Guid guid;
-        private QueryHandlerRegister queryHandler;
+        private QueryHandlerRegister register;
 
         [TestInitialize]
         public void TestInitialize()
         {
             guid = Guid.NewGuid();
-            queryHandler = new QueryHandlerRegister();
+            register = new QueryHandlerRegister();
         }
 
         [TestMethod]
         public void CanRegisterQueryHandler()
         {
-            queryHandler.Register(new TestQueryHandler(guid));
+            register.Register(new TestQueryHandler(guid));
         }
 
         [TestMethod]
         public void YouCanOnlyRegisterQueryOnce()
         {
-            queryHandler.Register(new TestQueryHandler(guid));
-            Action action = () => queryHandler.Register(new TestQueryHandler(guid));
+            register.Register(new TestQueryHandler(guid));
+            Action action = () => register.Register(new TestQueryHandler(guid));
 
             Assert.ThrowsException<HandlerAlreadyRegisteredException>(action);
         }
@@ -34,10 +34,10 @@ namespace Chroomsoft.Queries.Tests
         [TestMethod]
         public void CanHandleTestQuery()
         {
-            queryHandler.Register(new TestQueryHandler(guid));
+            register.Register(new TestQueryHandler(guid));
 
             var expected = guid;
-            var actual = queryHandler.Handle(new TestQuery());
+            var actual = register.Handle(new TestQuery());
 
             Assert.AreEqual(expected, actual);
         }
@@ -45,7 +45,7 @@ namespace Chroomsoft.Queries.Tests
         [TestMethod]
         public void ThrowsExceptionUponNonRegistedQuery()
         {
-            Action action = () => queryHandler.Handle(new TestQuery());
+            Action action = () => register.Handle(new TestQuery());
 
             Assert.ThrowsException<HandlerNotFoundException>(action);
         }

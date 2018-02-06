@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Commands\Commands.Core\Command.Core.csproj" />
+    <ProjectReference Include="..\Queries\Core\Queries.Core.csproj" />
   </ItemGroup>
 
 </Project>
