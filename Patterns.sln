@@ -21,15 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command.Core", "src\Command
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queries.Core", "src\Queries\Core\Queries.Core.csproj", "{E248CA38-7FEE-4FFD-A1FA-75D32F2CE04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.Core.NetFramework", "src\Queries\Core.NetFramework\Queries.Core.NetFramework.csproj", "{3B32DF1E-20A4-4DF2-9B61-C06C9E113690}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.NetFramework", "src\Queries\Core.NetFramework\Queries.NetFramework.csproj", "{3B32DF1E-20A4-4DF2-9B61-C06C9E113690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.Core.Portable", "src\Queries\Core.Portable\Queries.Core.Portable.csproj", "{C08D66C8-6C01-49D2-8458-6ADC0AF1BD56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.Portable", "src\Queries\Core.Portable\Queries.Portable.csproj", "{C08D66C8-6C01-49D2-8458-6ADC0AF1BD56}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queries.Tests", "src\Queries\Tests\Queries.Tests.csproj", "{FC0B30C4-2779-43F8-863F-97F2A0933158}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "src\Examples\Examples.csproj", "{1A6FD363-98C8-472E-8C3F-81CE71585420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Core.Portable", "src\Commands\Commands.Core.Portable\Commands.Core.Portable.csproj", "{532A4A7F-5344-450C-BEE4-E4E3065D6746}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Portable", "src\Commands\Commands.Core.Portable\Commands.Portable.csproj", "{532A4A7F-5344-450C-BEE4-E4E3065D6746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
