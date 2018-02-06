@@ -31,6 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "src\Examples\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Portable", "src\Commands\Commands.Core.Portable\Commands.Portable.csproj", "{532A4A7F-5344-450C-BEE4-E4E3065D6746}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1DE05EBA-087E-4B03-9459-2475F75E1B3C}"
+	ProjectSection(SolutionItems) = preProject
+		ApplyVersionToAssemblies.ps1 = ApplyVersionToAssemblies.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
