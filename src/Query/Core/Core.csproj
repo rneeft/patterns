@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Chroomsoft.Queries</AssemblyName>
+    <RootNamespace>Chroomsoft.Queries</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Rick Neeft</Authors>
+    <Company>Chroomsoft</Company>
+    <Product>Chroomsoft Queries</Product>
+    <Description>A foundation to implement the query pattern</Description>
+    <PackageProjectUrl>https://github.com/rneeft/query</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rneeft/query</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\bin\debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>
