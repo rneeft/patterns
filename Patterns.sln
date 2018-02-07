@@ -10,10 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{BD92
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{BBEB5BDB-2D8D-4041-938F-FE0D62FFFA52}"
 	ProjectSection(SolutionItems) = preProject
-		Commands.nuspec = Commands.nuspec
+		src\Commands\Commands.nuspec = src\Commands\Commands.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Test", "src\Commands\Commands.Test\Commands.Test.csproj", "{370CD024-3F13-4452-89A0-E9D782FD8F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commands.Test", "src\Commands\Commands.Test\Commands.Test.csproj", "{370CD024-3F13-4452-89A0-E9D782FD8F1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.NetFramework", "src\Commands\Commands.NetFramework\Commands.NetFramework.csproj", "{B319D890-7A28-472D-8442-11D1DA3EDD7E}"
 EndProject
@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queries.Portable", "src\Que
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queries.Tests", "src\Queries\Tests\Queries.Tests.csproj", "{FC0B30C4-2779-43F8-863F-97F2A0933158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "src\Examples\Examples.csproj", "{1A6FD363-98C8-472E-8C3F-81CE71585420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examples", "src\Examples\Examples.csproj", "{1A6FD363-98C8-472E-8C3F-81CE71585420}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands.Portable", "src\Commands\Commands.Core.Portable\Commands.Portable.csproj", "{532A4A7F-5344-450C-BEE4-E4E3065D6746}"
 EndProject
