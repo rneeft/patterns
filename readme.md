@@ -9,7 +9,7 @@ This libary contains a couple of Design Patterns.
 The following design patterns are available:
 
 - [Query Pattern](docs/queries.md)
-- [Command Pattern](docs/command.md)
+- [Command Pattern](docs/commands.md)
 
 ## How to install
 
