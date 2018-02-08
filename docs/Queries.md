@@ -1,4 +1,21 @@
-﻿using System;
+# Query Pattern
+
+Package that provides the foundation to implement the Query Pattern
+
+## How to install
+
+`Install-Package Chroomsoft.Queries`
+
+[NuGet.org](https://www.nuget.org/packages/Chroomsoft.Queries/)
+
+## How to use
+
+- Create a (.NET Core) console application
+- Install the `Chroomsoft.Queries` package
+- Pasted the following code:
+
+```csharp
+using System;
 using System.IO;
 using Chroomsoft.Queries;
 
@@ -41,3 +58,4 @@ namespace Example
         }
     }
 }
+```
