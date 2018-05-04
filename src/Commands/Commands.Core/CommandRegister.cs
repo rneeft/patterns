@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Chroomsoft.Commands
 {
@@ -7,26 +8,26 @@ namespace Chroomsoft.Commands
     {
         private readonly Dictionary<Type, object> handlers = new Dictionary<Type, object>();
 
-        public void Handle<TCommand>(TCommand command)
+        public async Task ExecuteAsync<TCommand>(TCommand command) where TCommand : ICommand
         {
             var commandType = command.GetType();
 
             if (!handlers.ContainsKey(commandType))
                 throw new CommandHandlerNotFoundException(commandType);
 
-            var handler = (Action<TCommand>)this.handlers[commandType];
+            var handlerAsync = (Func<TCommand, Task>)this.handlers[commandType];
 
-            handler(command);
+            await handlerAsync(command);
         }
 
-        public void Register<TCommand>(ICommandHandler<TCommand> handler) where TCommand : ICommand
+        public void Register<TCommand>(IAsyncCommandHandler<TCommand> handler) where TCommand : ICommand
         {
             var commandType = typeof(TCommand);
 
             if (handlers.ContainsKey(commandType))
                 throw new CommandHandlerAlreadyRegisteredException(commandType);
 
-            handlers.Add(typeof(TCommand), (Action<TCommand>)handler.Handle);
+            handlers.Add(commandType, (Func<TCommand, Task>)handler.HandleAsync);
         }
     }
 }

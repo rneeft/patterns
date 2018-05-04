@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Chroomsoft.Commands
+﻿namespace Chroomsoft.Commands
 {
-    public class ICommand
+    public interface ICommand
     {
     }
 }

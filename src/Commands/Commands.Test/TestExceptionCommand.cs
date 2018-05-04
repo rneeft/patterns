@@ -1,6 +1,6 @@
 ﻿namespace Chroomsoft.Commands.Test
 {
-    public class TestCommand : ICommand
+    public class ExceptionTestCommand : ICommand
     {
     }
 }

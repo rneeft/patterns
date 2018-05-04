@@ -1,8 +1,11 @@
-﻿namespace Chroomsoft.Commands
+﻿using System.Threading.Tasks;
+
+namespace Chroomsoft.Commands
 {
     public interface ICommandHandlerRegister
     {
-        void Handle<TCommand>(TCommand command);
-        void Register<TCommand>(ICommandHandler<TCommand> handler) where TCommand : ICommand;
+        Task ExecuteAsync<TCommand>(TCommand command) where TCommand : ICommand;
+
+        void Register<TCommand>(IAsyncCommandHandler<TCommand> handler) where TCommand : ICommand;
     }
 }
