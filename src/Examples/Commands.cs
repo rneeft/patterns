@@ -1,25 +1,4 @@
-# Command Pattern
-
-Package that provides the foundation to implement the Commands Pattern
-
-## How to install
-
-`Install-Package Chroomsoft.Commands`
-
-[NuGet.org](https://www.nuget.org/packages/Chroomsoft.Commands/)
-
-## Async by default (Breaking change)
-
-From Version 2.0 and up all the command handlers are default awaitable, this will mean that the register always return a `Task` on the `ExecuteAsync` method. When a command handler is not returning an awaitable `Task` it need to implement the class `CommandSyncHandler`, which will wrap the `void` handler into a Task handler.
-
-## How to use
-
-- Create a (.NET Core) console application
-- Install the `Chroomsoft.Commands` package
-- Pasted the following code:
-
-```csharp
-using System;
+﻿using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -55,7 +34,7 @@ namespace Chroomsoft.Commands.Example
 
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void CommandMain(string[] args)
         {
             // Setup classes
             ICommandHandlerRegister register = new CommandRegister();
@@ -91,4 +70,3 @@ namespace Chroomsoft.Commands.Example
         }
     }
 }
-```

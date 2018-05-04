@@ -6,6 +6,10 @@ This libary contains a couple of Design Patterns.
 
 ![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=Github-Patterns-Repo&metric=alert_status)
 
+## Breaking changes in version 2.0
+
+Please be aware of some breking changes between the version 1.0 and 2.0 on the Commands nuget package!
+
 ## Design Patterns
 
 The following design patterns are available:
