@@ -1,8 +1,11 @@
-﻿namespace Chroomsoft.Queries
+﻿using System.Threading.Tasks;
+
+namespace Chroomsoft.Queries
 {
     public interface IQueryHandlerRegister
     {
-        TResult Handle<TResult>(IQuery<TResult> query);
+        Task<TQueryResult> HandleAsync<TQueryResult>(IQuery<TQueryResult> query);
+
         void Register<TQuery, TQueryResult>(IQueryHandler<TQuery, TQueryResult> handler) where TQuery : IQuery<TQueryResult>;
     }
 }

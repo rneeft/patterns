@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Chroomsoft.Queries.Tests
 {
-    public class TestQueryAsyncHandler : IQueryHandler<TestAsyncQuery, Task<Guid>>
+    public class TestQueryAsyncHandler : IQueryHandler<TestQuery, Guid>
     {
         private readonly Guid guid;
 
@@ -12,7 +12,7 @@ namespace Chroomsoft.Queries.Tests
             this.guid = guid;
         }
 
-        public async Task<Guid> Handle(TestAsyncQuery query)
+        public async Task<Guid> HandleAsync(TestQuery query)
         {
             await Task.Delay(1);
 

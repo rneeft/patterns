@@ -48,11 +48,11 @@
     <Compile Include="..\Commands.Core\CommandSyncHandler.cs">
       <Link>CommandSyncHandler.cs</Link>
     </Compile>
-    <Compile Include="..\Commands.Core\IAsyncCommandHandler.cs">
-      <Link>IAsyncCommandHandler.cs</Link>
-    </Compile>
     <Compile Include="..\Commands.Core\ICommand.cs">
       <Link>ICommand.cs</Link>
+    </Compile>
+    <Compile Include="..\Commands.Core\ICommandHandler.cs">
+      <Link>ICommandHandler.cs</Link>
     </Compile>
     <Compile Include="..\Commands.Core\ICommandHandlerRegister.cs">
       <Link>ICommandHandlerRegister.cs</Link>

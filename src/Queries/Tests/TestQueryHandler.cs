@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Chroomsoft.Queries.Tests
 {
@@ -11,9 +12,9 @@ namespace Chroomsoft.Queries.Tests
             this.guid = guid;
         }
 
-        public Guid Handle(TestQuery query)
+        public Task<Guid> HandleAsync(TestQuery query)
         {
-            return guid;
+            return Task.FromResult(guid);
         }
     }
 }

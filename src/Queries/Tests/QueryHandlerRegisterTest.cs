@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Chroomsoft.Queries.Tests
 {
@@ -33,33 +33,22 @@ namespace Chroomsoft.Queries.Tests
         }
 
         [TestMethod]
-        public void CanHandleTestQuery()
+        public async Task CanHandleTestQuery()
         {
             register.Register(new TestQueryHandler(guid));
 
             var expected = guid;
-            var actual = register.Handle(new TestQuery());
+            var actual = await register.HandleAsync(new TestQuery());
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ThrowsExceptionUponNonRegistedQuery()
+        public async Task ThrowsExceptionUponNonRegistedQuery()
         {
-            Action action = () => register.Handle(new TestQuery());
+            Func<Task> action = async () => await register.HandleAsync(new TestQuery());
 
-            Assert.ThrowsException<HandlerNotFoundException>(action);
-        }
-
-        [TestMethod]
-        public async Task SupporTestForAsyncSupport()
-        {
-            register.Register(new TestQueryAsyncHandler(guid));
-
-            var expected = guid;
-            var actual = await register.Handle(new TestAsyncQuery());
-
-            Assert.AreEqual(expected, actual);
+            await Assert.ThrowsExceptionAsync<HandlerNotFoundException>(action);
         }
     }
 }

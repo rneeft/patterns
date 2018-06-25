@@ -1,7 +1,9 @@
-﻿namespace Chroomsoft.Queries
+﻿using System.Threading.Tasks;
+
+namespace Chroomsoft.Queries
 {
     public interface IQueryHandler<TQuery, TReadModel> where TQuery : IQuery<TReadModel>
     {
-        TReadModel Handle(TQuery query);
+        Task<TReadModel> HandleAsync(TQuery query);
     }
 }

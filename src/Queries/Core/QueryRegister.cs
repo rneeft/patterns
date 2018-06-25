@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Chroomsoft.Queries
 {
@@ -14,10 +15,10 @@ namespace Chroomsoft.Queries
             if (handlers.ContainsKey(queryType))
                 throw new HandlerAlreadyRegisteredException(queryType);
 
-            handlers.Add(typeof(TQuery), (Func<TQuery, TQueryResult>)handler.Handle);
+            handlers.Add(typeof(TQuery), (Func<TQuery, Task<TQueryResult>>)handler.HandleAsync);
         }
 
-        public TResult Handle<TResult>(IQuery<TResult> query)
+        public async Task<TQueryResult> HandleAsync<TQueryResult>(IQuery<TQueryResult> query)
         {
             var type = query.GetType();
 
@@ -26,7 +27,7 @@ namespace Chroomsoft.Queries
 
             dynamic handler = this.handlers[type];
 
-            return handler((dynamic)query);
+            return await handler((dynamic)query);
         }
     }
 }
