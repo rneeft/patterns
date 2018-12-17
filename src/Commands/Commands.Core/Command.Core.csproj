@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Chroomsoft.Commands</AssemblyName>
     <RootNamespace>Chroomsoft.Commands</RootNamespace>
-    <AssemblyVersion>3.0.1.1</AssemblyVersion>
-    <FileVersion>3.0.1.1</FileVersion>
+    <AssemblyVersion>3.0.1.2</AssemblyVersion>
+    <FileVersion>3.0.1.2</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\bin\Release\netstandard2.0\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
   </PropertyGroup>
 
 </Project>
